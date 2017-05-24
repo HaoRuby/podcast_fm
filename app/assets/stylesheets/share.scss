@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i');
+
+$white: #fff;
+$highlight: #d2674e;
+$dark: #22292e;
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper-wide {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.wrapper {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.wrapper-skinny {
+	width: 60%;
+	margin: 0 auto;
+}
+
+//clear fix
+.cf:before, .cf:after {
+	content: " ";
+	display: table;
+}
+.cf:after {
+	clear:both;
+}
+
+//button
+.button {
+	color: $white;
+	text-decoration: none;
+	font-size: 1rem;
+	padding: 1rem 2rem;
+	border-radius: 2rem;
+	outline: none;
+	border: none;
+	display: inline-block;
+	min-width: 8.5rem;
+}
+.button-highlight {
+	background: $highlight;
+	transition: background .4s ease-in-out;
+	&:hover {
+		background: darken($highlight, 7.5%);
+	}
+}
+.button-white {
+	background: $white;
+	color: $dark;
+	transition: background .4s ease-in-out;
+	&:hover {
+		background: darken($white, 7.5%);
+	}
+}
