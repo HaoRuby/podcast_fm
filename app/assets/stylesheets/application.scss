@@ -6,6 +6,7 @@ $dark: #22292e;
 
 body {
 	font-family: 'Open Sans', sans-serif;
+	margin: 0px;
 }
 
 .wrapper-wide {
@@ -59,3 +60,6 @@ body {
 		background: darken($white, 7.5%);
 	}
 }
+
+@import 'welcome';
+@import 'normalize'
