@@ -14,7 +14,8 @@
     <% elsif notice %>
       <p class="notice"><%= notice %></p>
     <% end %>
-    
+    <%# header %>
+    <%= render partial: 'share/header' %>
     
     <%= yield %>
   </body>
