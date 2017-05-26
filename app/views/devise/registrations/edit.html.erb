@@ -1,5 +1,5 @@
 <div class="banner" id="dark-banner">
-  <h1><%= current_podcast.title %> Dashboard</h1>
+  <h1><%= current_podcast.title if !current_podcast.title.blank? %> Dashboard</h1>
 </div>
 <div id="links">
   <div class="wrapper-skinny">
