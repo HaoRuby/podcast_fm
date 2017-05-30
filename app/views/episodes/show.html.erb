@@ -2,13 +2,26 @@
   <%= render partial: 'share/podcast_show_head' %>
   <div id="breadcrumb">
     <%= link_to podcasts_path do %>
-    All Podcasts
-    <span>/</span>
-    <%= @podcast.title %>
+      All Podcasts
+      <span>/</span>
+      <%= link_to @podcast.title, @podcast %>
+      <span>/</span>
+      <%= @episode.title %>
     <% end %>
   </div>
 
-  <div id="episodes">
+
+<div id="episode-content">
+  <div class="wrapper-skinny">
+    <img src="image/episode.png" alt="episode" class="current-episode-thumnail">
+    <h2><%= @episode.title %></h2>
+    <p class="description">
+      <%= @episode.description %>
+    </p>
+  </div>
+</div>
+
+<div id="episodes">
     <div class="wrapper-skinny">
       <ul class="cf">
         <% @episodes.each do |episode| %>
@@ -28,12 +41,5 @@
         <% end %>
       </ul>
     </div>
-  </div>
-
-  <div class="pagination">
-    <span class="previous_page disable">Previous</span> 
-    <em class="current">1</em>
-    <a href="#">2</a>
-    <a href="#" class="next_page">Next</a>
   </div>
 </div>

@@ -1,0 +1,19 @@
+<div id="show-banner" >
+  <div class="wrapper-skinny">
+    <h1><%= @podcast.title %></h1>
+    <p class="description">
+      <%= @podcast.description %>
+    </p>
+    <% unless @podcast.itunes.blank? %>
+    <%= link_to 'iTunes', @podcast.itunes, class: 'subscribe-link' %>
+    <% end %>
+
+    <% unless @podcast.stitcher.blank? %>
+    <%= link_to 'Stitcher', @podcast.stitcher, class: 'subscribe-link' %>
+    <% end %>
+
+    <% unless @podcast.podbay.blank? %>
+    <%= link_to 'Podbay', @podcast.podbay, class: 'subscribe-link' %>
+    <% end %>
+  </div>  
+</div>
