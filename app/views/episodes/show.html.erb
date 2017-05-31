@@ -13,7 +13,7 @@
 
   <div id="episode-content">
     <div class="wrapper-skinny">
-      <img src="image/episode.png" alt="episode" class="current-episode-thumnail">
+      <%= image_tag @episode.episode_thumbnail.url(:large), class: 'current-episode-thumnail' %>
       <h2><%= @episode.title %></h2>
       <p class="description">
         <%= @episode.description %>
@@ -28,7 +28,7 @@
           <li class="cf">
             <div class="episode-thumbnail">
               <%= link_to podcast_episode_path(@podcast, episode) do %>
-                <img src="image/podcast.png" alt="podcast">
+                <%= image_tag episode.episode_thumbnail.url(:medium) %>
               <% end %>
             </div>
             <div class="episode-overview">

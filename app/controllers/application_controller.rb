@@ -11,7 +11,8 @@ class ApplicationController < ActionController::Base
   		u.permit( :email,
   							:password,
   							:password_confirmation,
-  							:title)
+  							:title,
+                :thumbnail)
   	end
   	
   	devise_parameter_sanitizer.permit(:account_update) do |u|
@@ -23,7 +24,8 @@ class ApplicationController < ActionController::Base
   							:description,
   							:itunes,
   							:stitcher,
-  							:podbay)
+  							:podbay,
+                :thumbnail)
   	end
   end
 end

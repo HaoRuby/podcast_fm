@@ -15,7 +15,7 @@
           <li class="cf">
             <div class="episode-thumbnail">
               <%= link_to podcast_episode_path(@podcast, episode) do %>
-                <img src="image/podcast.png" alt="podcast">
+                <%= image_tag episode.episode_thumbnail.url(:medium) %>
               <% end %>
             </div>
             <div class="episode-overview">
