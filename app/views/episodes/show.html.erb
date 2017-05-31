@@ -11,17 +11,17 @@
   </div>
 
 
-<div id="episode-content">
-  <div class="wrapper-skinny">
-    <img src="image/episode.png" alt="episode" class="current-episode-thumnail">
-    <h2><%= @episode.title %></h2>
-    <p class="description">
-      <%= @episode.description %>
-    </p>
+  <div id="episode-content">
+    <div class="wrapper-skinny">
+      <img src="image/episode.png" alt="episode" class="current-episode-thumnail">
+      <h2><%= @episode.title %></h2>
+      <p class="description">
+        <%= @episode.description %>
+      </p>
+    </div>
   </div>
-</div>
 
-<div id="episodes">
+  <div id="episodes">
     <div class="wrapper-skinny">
       <ul class="cf">
         <% @episodes.each do |episode| %>

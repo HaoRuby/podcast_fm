@@ -1,0 +1,13 @@
+<div class="banner" id="dark-banner">
+  <h1><%= @podcast.title %> Dashboard</h1>
+</div>
+<div id="links">
+  <div class="wrapper-skinny">
+    <ul>
+      <li><%= link_to_unless_current 'Episodes', authenticated_root_path %></li>
+      <li><%= link_to_unless_current 'New Episode', new_podcast_episode_path(@podcast) %></li>
+      <li><%= link_to_unless_current 'Account Settings', edit_podcast_registration_path %></li>
+      <li><%= link_to_unless_current 'View Podcast', podcast_path(current_podcast) %></li>
+    </ul>
+  </div>
+</div>

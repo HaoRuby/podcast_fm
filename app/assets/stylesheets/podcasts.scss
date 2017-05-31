@@ -65,22 +65,7 @@
 			margin: 0 auto 2rem auto;
 			color: lighten($dark, 20%);
 		}
-		.subscribe-link {
-			font-size: .6rem;
-			text-transform: uppercase;
-			font-weight: 700;
-			text-align: center;
-			color: $white;
-			display: inline;
-			background: $highlight;
-			border-radius: 2rem;
-			padding: .5rem 1rem;
-			margin: 0 .5rem;
-			text-decoration: none;
-			&:hover {
-				background: darken($highlight, 10%);
-			}
-		}
+		
 	}
 	#breadcrumb {
 		text-align: center;

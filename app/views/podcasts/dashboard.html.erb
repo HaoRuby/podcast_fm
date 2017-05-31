@@ -1,0 +1,30 @@
+<%= render partial: 'share/dashboard_head' %>
+
+<div id="podcast-show">
+  <div id="episodes">
+    <div class="wrapper-skinny">
+      <ul class="cf">
+        <% @episodes.each do |episode| %>
+        <li class="cf">
+          <div class="episode-thumbnail">
+            <%= link_to podcast_episode_path(@podcast, episode) do %>
+            <img src="image/podcast.png" alt="podcast">
+            <% end %>
+          </div>
+          <div class="episode-overview">
+            <h2><%= link_to episode.title, podcast_episode_path(@podcast, episode) %></h2>
+            <p class="description">
+              <%= truncate(episode.description, length: 150) %>
+            </p>
+            <%= link_to 'Edit', edit_podcast_episode_path(@podcast, episode), class: "subscribe-link" %>
+            <%= link_to 'Delete', podcast_episode_path(@podcast, episode),
+                                  class: "subscribe-link",
+                                  method: :delete,
+                                  data: {comfirm: "Are your sure?"} %>
+          </div>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -155,6 +155,7 @@ textarea {
 			display: inline;
 			margin-right: 1rem;
 			font-weight: 700;
+			color: $highlight;
 			a {
 				color: $dark;
 				text-decoration: none;
@@ -164,10 +165,23 @@ textarea {
 			}
 		}
 	}
-	.current {
-		color: $highlight;
-	}
 }
+.subscribe-link {
+			font-size: .6rem;
+			text-transform: uppercase;
+			font-weight: 700;
+			text-align: center;
+			color: $white;
+			display: inline;
+			background: $highlight;
+			border-radius: 2rem;
+			padding: .5rem 1rem;
+			margin: 0 .5rem;
+			text-decoration: none;
+			&:hover {
+				background: darken($highlight, 10%);
+			}
+		}
 
 //pagination
 .pagination:before, .pagination:after {

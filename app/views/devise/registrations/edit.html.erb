@@ -1,16 +1,4 @@
-<div class="banner" id="dark-banner">
-  <h1><%= current_podcast.title if !current_podcast.title.blank? %> Dashboard</h1>
-</div>
-<div id="links">
-  <div class="wrapper-skinny">
-    <ul>
-      <li><a href="#">Episodes</a></li>
-      <li><a href="#">New Episode</a></li>
-      <li><%= link_to 'Account Settings', edit_podcast_registration_path, class: 'current' %></li>
-      <li><a href="#">View Podcast</a></li>
-    </ul>
-  </div>
-</div>
+<%= render partial: 'share/dashboard_head' %>
 
 <!-- <h2>Edit <%# resource_name.to_s.humanize %></h2> -->
 
