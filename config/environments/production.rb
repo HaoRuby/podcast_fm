@@ -87,7 +87,7 @@ Rails.application.configure do
   # Set paperclip to upload image on s3 by default
   config.paperclip_defaults = {
     storage: :s3,
-    :s3_protocol => :http, 
+    :s3_protocol => :https, 
     s3_credentials: {
       bucket: ENV.fetch('S3_BUCKET_NAME'),
       access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
