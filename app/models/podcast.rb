@@ -7,7 +7,8 @@ class Podcast < ApplicationRecord
   has_many :episodes
 
   has_attached_file :thumbnail, 
-  									styles: { large: "1000x1000#", medium: "550x550#" } 
+  									styles: { large: "1000x1000#", medium: "550x550#" },
+                    :s3_protocol => :http 
   									#default_url: "/images/:style/missing.png"
   validates_attachment_content_type :thumbnail, 
   																	content_type: /\Aimage\/.*\z/
