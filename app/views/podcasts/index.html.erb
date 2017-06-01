@@ -19,10 +19,14 @@
     </ul>
   </div>
 </div>
+<%= will_paginate @podcasts, previous_label: "Previous", next_label: "Next" %>
 
-<div class="pagination">
-    <span class="previous_page disable">Previous</span> 
-    <em class="current">1</em>
-    <a href="#">2</a>
-    <a href="#" class="next_page">Next</a>
-</div>
+<%# This is pagination template when using will_paginate gem %>
+  <!-- 
+    <div class="pagination">
+        <span class="previous_page disable">Previous</span> 
+        <em class="current">1</em>
+        <a href="#">2</a>
+        <a href="#" class="next_page">Next</a>
+    </div> 
+  -->
